@@ -1,0 +1,341 @@
+/*公共类*/
+.flex{
+    display: flex;
+}
+.sa{
+    justify-content: space-around;
+}
+.sb{
+    justify-content: space-between;
+}
+
+.al{
+    align-items: center;
+}
+
+.fdc{
+    flex-direction: column;
+}
+.tc{
+    text-align: center;
+}
+
+.fr{
+    float: right;
+}
+
+/*1.食品安全*/
+.top{
+    height: .44rem;
+    background: #FFFCEC;
+    color: #FBC42C;
+    padding: 0 .12rem;
+    font-size: .16rem;
+}
+.top .arrow-right{
+    width: .07rem;
+    height: .07rem;
+    border-top: .01rem solid #FBC42C;
+    border-right: .01rem solid #FBC42C;
+    transform: rotate(45deg); /*正值顺时针*/
+}
+
+/*2.头部*/
+header{
+    height: .55rem;
+    background: #FF4683;
+    font-size: .18rem;
+    color: #ffffff;
+    padding: 0 .12rem;
+}
+
+header a{
+    color: #ffffff;
+    opacity: 0.6;
+}
+
+header .arrow-down{
+    width: .07rem;
+    height: .07rem;
+    transform: rotate(135deg);
+    border-top: .01rem solid #ffffff;
+    border-right: .01rem solid #ffffff;
+    margin: .07rem 0 0 .05rem;
+}
+
+header h3{
+    background: url("../img/logo.png") no-repeat center center;  /*背景图比放置的位置小*/
+    background-size: auto .2rem;
+    text-indent: -9999px;
+    flex: 1 1 auto;/*本来h3没有设宽，就只是图片的大小，这里设为自动伸展*/
+}
+
+.icon-location{
+    width: .18rem;
+    height: .23rem;
+    background: url("../img/my.png") no-repeat;
+    background-size: .18rem auto;
+    margin-right: .06rem;
+}
+
+/*3.搜索框*/
+.search{
+    height: .63rem;
+    background: #F1F1F1;
+}
+
+.search form{
+    flex: 1 1 auto;
+    background: #ffffff;
+    height: .37rem;
+    border: .01rem solid #dddddd;
+    border-radius: .15rem;
+    margin: 0 .2rem;
+}
+
+.search form input{
+    padding: 0 .05rem;
+    font-size: .16rem;
+    flex: 1 1 auto;
+    margin: 0 0.08rem;
+}
+
+.search form button{
+    width: .14rem;
+    height: .16rem;
+    background: url("../img/btn.png") no-repeat;
+    background-size: .14rem auto;
+    margin-right: .12rem;
+}
+
+/*4.轮播图*/
+/**轮播图**/
+.swipewarp{
+    padding: 0 .12rem;
+}
+.swipe {
+    overflow: hidden;
+    /*visibility: hidden;*/
+    position: relative;
+}
+.swipe-wrap {
+    overflow: hidden;
+    position: relative;
+}
+.swipe-wrap > div {
+    float:left;
+    width:100%;
+    position: relative; /*一定不可少，基于自己的位置做的动画*/
+}
+.swipe-wrap > div >a{
+    display: block;
+    width: 100%;
+}
+.swipe-wrap > div > a >img{
+    display: block;
+    width: 100%;
+}
+.indrector{
+    position: absolute;
+    bottom: .1rem;
+    left: 50%;
+    margin-left: -.15rem;
+}
+.swipe ul li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    float: left;
+    margin:.05rem ;
+}
+.cur{
+    background: red !important;
+}
+
+/*5.分类导航*/
+.category{
+    font-size: .16rem;
+}
+.category ul{
+    padding-top: .14rem;
+    padding-bottom: .3rem;
+    border-bottom: .01rem solid #dddddd;
+}
+.category li.pdt16{
+    padding-top: .16rem;
+}
+
+.category img{
+    width: .5rem;
+    height: .5rem;
+}
+
+/*6.top10*/
+.top10{
+    padding: 0 .12rem;
+}
+
+.top10 .top10txtbox{
+    display: flex;
+    flex-flow: column nowrap;
+    white-space: nowrap;
+    justify-content: center;
+    width: 2rem;
+}
+
+.top10 .top10txtbox h3{
+    color: #222;
+    margin-bottom: .25rem;
+    font-size: .16rem;
+}
+
+.top10 .top10txtbox p{
+    color: #888;
+    margin-bottom: .18rem;
+}
+
+.top10  .timecount{
+    color:#ee4339;
+    font-size: .18rem;
+}
+
+.top10 .top10imgbbox{
+    flex: 1 1 auto;
+}
+
+.top10 .top10imgbbox img{
+    width: 100%;
+}
+
+/*7.猜你喜欢*/
+
+.guessfav{
+    padding: 0 .12rem;
+}
+.guessfav ul li{
+    margin-bottom: .1rem;
+    padding-bottom: .1rem;
+    border-bottom: 1px solid #dddddd;
+}
+.guessfav .arrow-right{
+    width: .07rem;
+    height: .07rem;
+    transform: rotate(45deg);
+    border-top: .01rem solid #8D8D8D;
+    border-right: .01rem solid #8D8D8D;
+    margin-left: .1rem;
+}
+.section-title{
+    height: .58rem;
+    font-size: .12rem;
+    color: #88888D;
+}
+.section-title h3{
+    margin-right: auto;
+    font-size: .16rem;
+}
+
+.guessfav .flex .imgbox{
+    margin-right: .25rem;
+    position: relative;
+}
+.guessfav .flex .txtbox{
+    flex: 1 1 auto;
+}
+
+.guessfav img{
+    width: 120px;
+}
+
+.freeorder{
+    background: url("../img/freeorder.png") no-repeat;
+    background-size: 45px auto;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 0;
+    left: 0;
+}
+
+.guessfav h4{
+    font-size: .18rem;
+    color:#22222d;
+    height: .30rem;
+    line-height: .30rem;
+}
+
+.guessfav .f-normal{
+    color:#888;
+    font-size: .14rem;
+}
+
+.guessfav .desc{
+    margin-bottom: .08rem;
+ }
+
+.guessfav .newprice{
+    color:#ff4683;
+    font-size: .16rem;
+    font-weight: 700;
+    margin-right: .05rem;
+}
+
+.guessfav .privilege{
+    border:.01rem solid #ff4683;
+    border-radius: .02rem;
+    color:#ff4683;
+    margin-left: .05rem;
+}
+
+/*8.footer*/
+.navinfo{
+    padding: 0 .12rem;
+    height: .46rem;
+    font-size: .14rem;
+    color: #636363;
+}
+
+.navinfo a{
+    color: #88888D;
+    border: 1px solid #CCCCCC;
+    display: inline-block;
+    padding: .02rem .04rem;
+    border-radius: .04rem;
+}
+
+.navinfo .user a{
+    margin: 0  .04rem;
+}
+
+footer .link a{
+   
+    flex: 1 1 auto;
+    border-right: 1px solid #DDDDDD;
+    text-align: center;
+}
+
+footer .link a:last-child{
+    border-right: none;
+}
+
+footer .copyright{
+    height: .36rem;
+    line-height: .36rem;
+    color: #DDDDE3;
+}
+
+footer .record{
+    height: .42rem;
+    line-height: .42rem;
+    color: #9393AE;
+    padding-bottom: .14rem;
+    border-bottom: 2px solid #E4E4E4;
+}
+footer .bottom-bar{
+    padding-top: .1rem;
+}
+footer .bottom-bar a{
+    font-size: .14rem;
+    color: #88888D;
+}
